@@ -1,0 +1,34 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "A large green construction vehicle is parked on the right side of the road near the curb.",
+                "explanation": "The parked construction vehicle requires the ego car to maintain a safe distance while driving past it to avoid any potential collisions."
+            },
+            {
+                "description": "A truck is visible in the distance ahead, moving in the same direction as the ego car.",
+                "explanation": "The truck's movement requires the ego car to be aware of its speed and position and to maintain a safe following distance."
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "The traffic scene contains several road users, with a focus on vehicles. There are two vehicles identified in the current view:\n\n1. A large, green construction vehicle is parked on the right side of the road close to the curb. This parked vehicle affects the ego car's driving behavior as it requires the ego car to keep a safe distance while maneuvering past the vehicle in order to avoid potential collisions.\n\n2. In the distance ahead, there is a truck moving in the same direction as the ego car. The presence of this truck necessitates that the ego car remains vigilant about its own speed and positioning while ensuring a safe following distance.\n\nThe traffic image does not feature any vulnerable road users, traffic signs, traffic lights, traffic cones, barriers, or other objects that would affect the driving behavior of the ego car."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This object is a construction vehicle, likely involved in nearby building or road work. The vehicle is bulky, equipped with various mechanisms such as lifts and levers, indicating its use in heavy-duty tasks such as lifting or moving large materials. The presence of this vehicle on or near the road means the ego car must be cautious, potentially adjusting its speed or lane to safely navigate around the work area, ensuring to follow any temporary traffic signs or directions given by road workers.",
+            "box": [
+                833,
+                404,
+                214,
+                271
+            ],
+            "category_name": "construction_vehicle"
+        }
+    },
+    "driving_suggestion": "The ego car should maintain a safe distance from the parked construction vehicle on the right and be aware of the truck moving in the same direction ahead. The clear and dry road state allows for normal driving conditions, so the ego car can proceed with normal caution."
+}

@@ -1,0 +1,30 @@
+{
+    "general_perception": {
+        "vehicles": [],
+        "vulnerable_road_users": [
+            {
+                "description": "一只狗位于道路中央，从自车的视角看稍微偏右。",
+                "explanation": "这只狗可能会不可预测地移动，构成潜在危险，需要本车随时准备减速或停车以防止碰撞。"
+            }
+        ],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "交通场景中包括一个易受伤害的道路使用者。具体来说，有一只狗位于从自车视角看去的道路中间偏右的位置。这构成了一个潜在的危险，因为这只狗可能会不按常理移动。因此，自车必须做好减速或停车的准备以防止碰撞。此场景中没有车辆、交通标志、交通信号灯、交通锥、障碍物或其他物体。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "此物体被识别为狗。狗通常被驯养，但在道路情况下可能表现出不可预测性。它们出现在道路上或附近时，需要驾驶员谨慎驾驶，以防事故或对动物造成伤害。调整速度并准备停车是确保安全的建议行为。",
+            "box": [
+                761,
+                572,
+                47,
+                27
+            ],
+            "category_name": "dog"
+        }
+    },
+    "driving_suggestion": "减速并做好停车准备以防狗移动。由于路面湿滑，增加车与车之间的距离。持续观察路面以防其他不可预测的因素出现。"
+}

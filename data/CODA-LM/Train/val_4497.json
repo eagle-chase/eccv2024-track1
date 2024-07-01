@@ -1,0 +1,30 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "A large orange road maintenance vehicle parked on the right side of the road",
+                "explanation": "This vehicle occupies part of the right lane, potentially obstructing the path of the ego car."
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "The image features a large orange road maintenance vehicle parked on the right side of the road. This vehicle occupies part of the right lane and could potentially obstruct the path of the ego car."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This is a construction vehicle, specifically a yellow backhoe or excavator. It is equipped with a hydraulic arm and digging bucket, typically used for heavy tasks such as digging, demolition, and material handling at a construction site. The presence of this construction vehicle on or near the roadway indicates potential roadwork or construction activity ahead. This could influence the future driving behavior of the ego car by necessitating reduced speed, heightened alertness, and readiness to obey any temporary traffic signs or directions from road workers. Additionally, the ego car may need to change lanes or adjust its route to accommodate for any road blockages or changes in traffic patterns due to the construction activities.",
+            "box": [
+                580,
+                509,
+                109,
+                129
+            ],
+            "category_name": "construction_vehicle"
+        }
+    },
+    "driving_suggestion": "The ego car should maintain a safe distance from the parked maintenance vehicle and prepare to potentially change lanes if necessary while monitoring for any personnel that might be around the vehicle. It's also advised to slightly reduce speed as a precaution."
+}

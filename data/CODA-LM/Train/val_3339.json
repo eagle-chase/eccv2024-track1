@@ -1,0 +1,40 @@
+{
+    "general_perception": {
+        "vehicles": [],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [
+            {
+                "description": "Orange and white traffic cones arranged in a diagonal line tapering towards the right side of the road, indicating a lane closure or roadwork ahead.",
+                "explanation": "These cones denote areas of the road that are unsafe or unsuitable to drive on and serve as a guide to safely navigate the vehicle away from potential hazards."
+            }
+        ],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "In the observed traffic image, there are orange and white traffic cones arranged in a diagonal line tapering towards the right side of the road, indicating a lane closure or roadwork ahead. These cones denote areas of the road that are unsafe or unsuitable to drive on and serve as a guide to safely navigate the vehicle away from potential hazards."
+    },
+    "region_perception": {
+        "2": {
+            "description and explanation": "This is a barrier marked with reflective stripes, designed to separate or delineate lanes on a roadway, and can also be used to protect construction sites or dangerous areas from traffic. The reflective material improves visibility at night or in low-light conditions, prompting drivers to stay within their lanes or avoid specific sections of the road. As a consequence, the behavior of the ego car should involve maintaining a safe distance from the barrier and possibly slowing down if the barriers indicate upcoming road work or lane closures.",
+            "box": [
+                853,
+                523,
+                86,
+                24
+            ],
+            "category_name": "barrier"
+        },
+        "3": {
+            "description and explanation": "This object is a traffic cone, typically used to temporarily redirect traffic in a safe manner during road work or other disruptions on the roadway. It is composed of a neon orange material with a reflective stripe around it to enhance visibility, especially at night or in low-light conditions. This traffic cone serves as an indication that the ego car should slow down and maneuver carefully around the area to avoid any potential hazards or ongoing work on the road.",
+            "box": [
+                868,
+                536,
+                39,
+                99
+            ],
+            "category_name": "traffic_cone"
+        }
+    },
+    "driving_suggestion": "Maintain a safe speed and prepare to merge left if necessary, following the direction indicated by the traffic cones. Use low beam headlights to ensure proper visibility and reduce glare for oncoming drivers. Stay alert for any additional signage or changes in road conditions due to construction or roadwork."
+}

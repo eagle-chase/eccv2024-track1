@@ -1,0 +1,35 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "一辆绿色轿车正在路口左转。",
+                "explanation": "轿车目前正在完成其调头动作，在它通过路口之前，将影响本车的行进能力。"
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [
+            {
+                "description": "十字路口右侧可见显示绿灯的红绿灯。",
+                "explanation": "本车有直行或右转通过交叉口的优先通行权。"
+            }
+        ],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "在交通图像中，有一辆绿色轿车正在路口左转。这辆轿车目前正在完成其转弯动作，直到它通过路口之前，将会影响本车的直行能力。此外，在路口的右侧可以看到一个交通信号灯，显示绿灯，这表明本车有权直行穿过路口或右转。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这个物体是一个在自车前方人行横道上骑行的自行车手。自行车手正在穿越车辆的行驶路径，很可能会影响自车的驾驶行为，需要减速或完全停车以确保自行车手横穿街道的安全。自车必须密切监控自行车手的动向，并适当让行，以避免任何潜在的事故。",
+            "box": [
+                516,
+                477,
+                188,
+                189
+            ],
+            "category_name": "cyclist"
+        }
+    },
+    "driving_suggestion": "自车应因潮湿的道路条件而降低速度，并做好停车或让路的准备，以防绿色轿车在自车到达人行横道时还未通过路口。另外，由于交叉路口目前被其他车辆占据且道路情况需要额外谨慎，因此不应立即采取左转或右转的行动。"
+}

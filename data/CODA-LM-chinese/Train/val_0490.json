@@ -1,0 +1,30 @@
+{
+    "general_perception": {
+        "vehicles": [],
+        "vulnerable_road_users": [],
+        "traffic signs": [
+            {
+                "description": "前方右转指示标志，位于道路左侧。",
+                "explanation": "通知司机即将右转，可能是路线的弯曲或交叉口。"
+            }
+        ],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "在交通图像中，道路左侧可见一个方向指示牌，表明前方有一个右转弯。这个标志很重要，因为它提醒驾驶员应该为即将到来的道路弯曲或需要右转的交叉口做好准备。图像中没有影响自车驾驶行为的车辆、弱势道路使用者、交通灯、交通锥、障碍物或其他物体。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这个标志是一个方向性交通标志，背景为蓝色，上面有一个向左上方斜指的白色箭头。这个标志表明，放置此标志的车道指示交通向左并入或转弜。作为驾驶者，看到这个标志应该准备向左并入或转弯，确保按照标志指示安全地变道或转弯。",
+            "box": [
+                397,
+                320,
+                100,
+                177
+            ],
+            "category_name": "traffic_sign"
+        }
+    },
+    "driving_suggestion": "沿着道路前进，保持安全速度以便舒适地应对前方交通标志指示的右转。对路况变化或突发障碍保持警惕。"
+}

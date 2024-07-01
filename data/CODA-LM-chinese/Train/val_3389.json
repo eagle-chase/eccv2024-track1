@@ -1,0 +1,44 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "右侧稍前方的卡车，尾灯亮着。",
+                "explanation": "卡车的存在和位置可能表明需要进行车道合并或调整速度。"
+            },
+            {
+                "description": "轿车就在本车前方直接位置。",
+                "explanation": "轿车决定了自车的跟车距离和速度。"
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "在交通图像中，有两辆车出现。\n\n首先，在右边稍微领先于自车的位置上有一辆装有尾灯的卡车。这辆卡车的存在和位置可能需要自车合并车道或调整车速。\n\n其次，有一辆轿车直接在自车前方。这辆轿车决定了自车的跟车距离和速度。\n\n图像中没有出现任何弱势道路使用者、交通标志、红绿灯、交通锥、障碍物或其他物体。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这个物体是一辆施工车辆，通常用于与道路施工和维护相关的任务。考虑到它直接出现在本车的行驶路径上，需要本车提高警觉并可能需要减速，以便安全绕过施工现场或准备应对意外停车或交通流变化。",
+            "box": [
+                700,
+                416,
+                118,
+                161
+            ],
+            "category_name": "construction_vehicle"
+        },
+        "2": {
+            "description and explanation": "该物体被识别为卡车。由于其大小和在道路上的位置，可能会限制本车的可见性和机动性，影响驾驶行为。本车应保持安全的跟车距离，并准备好应对降速，尤其是当卡车打信号转弯或变道时。",
+            "box": [
+                887,
+                291,
+                394,
+                429
+            ],
+            "category_name": "truck"
+        }
+    },
+    "driving_suggestion": "保持与轿车的安全距离，留意卡车是否有换道行为，并做好根据需要调整速度或改变车道的准备。由于夜间条件，保持警惕，注意可能出现的、不易立即察觉的潜在危险。"
+}

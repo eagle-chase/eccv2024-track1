@@ -1,0 +1,49 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "A white van positioned on the ego vehicle's right side of the road, facing the opposite direction",
+                "explanation": "The van is parked and is not an immediate moving hazard, but the presence of the vehicle must still be noted as there could be unpredictable movements or passengers exiting the vehicle"
+            }
+        ],
+        "vulnerable_road_users": [
+            {
+                "description": "A pedestrian with a light-colored top and dark pants walking along the left side of the road in the same direction as the ego vehicle",
+                "explanation": "Pedestrians can change direction or enter the driving lane unexpectedly, requiring the ego vehicle to maintain a safe distance and speed"
+            },
+            {
+                "description": "A small dog on a leash near the white van on the right side of the road",
+                "explanation": "Animals, even on leashes, can be unpredictable, and the ego vehicle should be prepared to stop or slow down if necessary"
+            }
+        ],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "The image contains two categories of road users. \n\nFirstly, there is a vehicle present, specifically a white van. This van is located on the right side of the road from the perspective of the ego vehicle and is facing the opposite direction. Although the van is currently parked and not an immediate moving hazard, it's important to note its presence. This is due to the potential for unpredictable movements, such as the van pulling out into the road, or passengers exiting the vehicle which could pose a risk.\n\nSecondly, there are vulnerable road users in the image. One is a pedestrian, who is wearing a light-colored top and dark pants. This pedestrian is walking along the left side of the road, moving in the same direction as the ego vehicle. Pedestrians can change direction or enter the driving lane unexpectedly, so it's crucial for the ego vehicle to maintain a safe distance and speed. Additionally, there is a small dog on a leash near the white van on the right side of the road. Even though the dog is on a leash, animals can be unpredictable. Therefore, the ego vehicle should be prepared to stop or slow down if necessary.\n\nThere are no traffic signs, traffic lights, traffic cones, barriers, or other objects present in the image."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This is a dog located near the edge of the road. Its presence can potentially influence the driving behavior of the ego car, requiring the driver to reduce speed and proceed with caution to avoid any sudden movements of the dog into the roadway.",
+            "box": [
+                500,
+                609,
+                17,
+                21
+            ],
+            "category_name": "dog"
+        },
+        "2": {
+            "description and explanation": "This object is a red traffic cone placed on the side of the road. It serves as a sign that there might be some roadwork, obstacles, or that part of the road may be closed off for safety reasons. Depending on its placement, it could require the ego car to slow down, maneuver slightly away from the cone, and be alert for any workers or additional signage.",
+            "box": [
+                577,
+                604,
+                8,
+                19
+            ],
+            "category_name": "misc"
+        }
+    },
+    "driving_suggestion": "Maintain a vigilant speed whilst observing the pedestrian to ensure they do not step into the roadway unexpectedly. Be cautious around the parked van in case of doors opening or passengers emerging. Be prepared to stop for the dog on the leash, should it venture into the driving lane. Continue to monitor the road ahead for any other users or changes in road conditions."
+}

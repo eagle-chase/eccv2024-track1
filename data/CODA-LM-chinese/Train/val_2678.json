@@ -1,0 +1,25 @@
+{
+    "general_perception": {
+        "vehicles": [],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "交通图像中不包含任何车辆、弱势道路使用者、交通标志、红绿灯、交通锥、障碍物或其他物体。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这个物体是一辆行驶在道路上的汽车。它展现为一辆点亮了前大灯和尾灯的汽车，暗示它正在运行且可能在移动。这辆车的存在要求本车保持安全的跟车距离和速度。本车还必须根据该车的行为，如减速、转弯或停车，随时调整行驶路线或速度。",
+            "box": [
+                307,
+                549,
+                114,
+                80
+            ],
+            "category_name": "car"
+        }
+    },
+    "driving_suggestion": "鉴于当前道路状况昏暗且可能充满挑战，建议本车（自驾车）缓慢谨慎行驶。驾驶员应对任何潜在的难以在昏暗光线中察觉的危险或障碍保持高度警惕。此外，在没有对向来车以避免照得它们眼花的情况下，使用远光灯可以帮助提高能见度。"
+}
