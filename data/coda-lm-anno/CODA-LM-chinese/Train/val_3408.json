@@ -1,0 +1,35 @@
+{
+    "general_perception": {
+        "vehicles": [],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [
+            {
+                "description": "前方交通信号灯的右侧显示绿灯。",
+                "explanation": "表示本车拥有通过交叉路口的通行权。"
+            }
+        ],
+        "traffic cones": [
+            {
+                "description": "一组黄黑相间的交通锥被放置在绿灯前，挡住了正前方的车道。",
+                "explanation": "前方可能有道路封闭或障碍，需要本车变道或绕行。"
+            }
+        ],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "在交通图像中，前方交通信号灯上的绿灯亮起，位于道路的右侧。这表明本车有权通过交叉路口。此外，在绿灯前方放置了一组黄黑相间的交通锥桶，挡住了正前方的车道。这暗示前方可能有道路封闭或障碍物，需要本车变道或绕行。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这个物体是一个显示红色信号的交通灯。交通灯在控制十字路口的车辆流动中起着至关重要的作用，确保交通安全、高效地运行。红灯指示司机在交叉路口停车等待，直至灯光变绿才可继续行驶。这一功能对自我车辆未来的驾驶行为有着重大影响，因为它必须停下并等待灯光变化，以安全地继续其旅程。",
+            "box": [
+                504,
+                485,
+                57,
+                93
+            ],
+            "category_name": "traffic_light"
+        }
+    },
+    "driving_suggestion": "自车应当准备向左或向右变道，以绕开交通锥标示的封闭车道，并遵循绿灯信号安全通过交叉口。"
+}

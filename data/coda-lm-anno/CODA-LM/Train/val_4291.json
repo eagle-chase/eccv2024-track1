@@ -1,0 +1,40 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "A large orange and yellow mobile crane truck on the rightmost lane, slightly overlapping the middle lane.",
+                "explanation": "Due to its size and load, it might move slowly or make sudden maneuvers. Its presence in multiple lanes may also indicate an upcoming lane change or preparation for an operation."
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "The scene includes a large orange and yellow mobile crane truck positioned in the rightmost lane, encroaching slightly on the middle lane. This vehicle's notable size and heavy load suggest that it may travel at reduced speeds or may execute unforeseen maneuvers. Given its occupation of more than one lane, it is plausible that the crane truck is either preparing to change lanes or setting up for an operation nearby."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This object is a construction vehicle, specifically a truck equipped with what appears to be a crane or lifting equipment. This type of vehicle is typically used in construction sites for transporting and handling heavy materials. In the context of driving behavior, the presence of a construction vehicle on the road typically suggests possible nearby construction activities. Drivers, including the ego vehicle, should therefore be alert for potential obstacles or changes in traffic patterns, such as reduced lanes or sudden stops. It is advisable for drivers to reduce speed and increase following distance when near such vehicles to accommodate unexpected maneuvers or stops.",
+            "box": [
+                769,
+                338,
+                274,
+                196
+            ],
+            "category_name": "construction_vehicle"
+        },
+        "2": {
+            "description and explanation": "The object is a large, heavy-duty construction vehicle, likely used for tasks such as lifting heavy materials or equipment. Its presence on the road indicates an active construction area nearby, which could affect traffic flow and safety. The vehicle is equipped with a crane, suggesting it is used for hoisting operations. Drivers in its vicinity, including the ego vehicle, should be cautious, maintain a safe distance, and be prepared for potential stops or slow-moving traffic.",
+            "box": [
+                0,
+                365,
+                183,
+                275
+            ],
+            "category_name": "construction_vehicle"
+        }
+    },
+    "driving_suggestion": "The ego car should maintain a safe distance from the crane truck ahead, given its potential unpredictability and size. It should also be prepared to react if the crane truck makes a sudden lane change or stop. Continuous monitoring of the truck's indicators and brake lights can provide additional clues about its intentions. If possible and safe, considering changing lanes to the left to avoid being too close to the crane truck."
+}

@@ -1,0 +1,69 @@
+{
+    "general_perception": {
+        "vehicles": [],
+        "vulnerable_road_users": [
+            {
+                "description": "Several parked scooters located on the sidewalk to the right of the ego vehicle, parallel to the roadway",
+                "explanation": "These scooters are not an immediate hazard as they are stationary and off the road, but the situation should be monitored for any sudden movements or individuals departing on the scooters that could enter the road."
+            }
+        ],
+        "traffic signs": [
+            {
+                "description": "A no-parking sign visible to the left of the ego vehicle indicating parking is prohibited",
+                "explanation": "The ego car should not consider stopping or parking in this area in accordance with the sign."
+            },
+            {
+                "description": "Directional traffic signs positioned on a pole to the right of the ego vehicle indicate a junction ahead where the road turns left",
+                "explanation": "These signs inform the ego vehicle of upcoming road geometry and potential merging or crossing traffic."
+            }
+        ],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [
+            {
+                "description": "A median barrier running along the left side of the roadway opposite the ego vehicle",
+                "explanation": "This barrier separates traffic directions and indicates the ego car must follow the road to the right, it can not make a left turn here."
+            }
+        ],
+        "other objects": [
+            {
+                "description": "A toppled traffic cone and a small bucket on the ground near the corner where the scooters are parked",
+                "explanation": "These objects on the ground could potentially become hazards if they are moved onto the roadway. Caution should be exercised when passing near them."
+            }
+        ],
+        "description and explanation": "The image shows several parked scooters on the sidewalk to the right of the ego vehicle, aligned parallel to the roadway. These scooters are stationary and off the road, presenting no immediate hazard, but the situation should be monitored for any sudden movements or individuals possibly departing on the scooters.\n\nThere are a couple of traffic signs: a no-parking sign to the left of the ego vehicle indicating that parking is prohibited in that area, thus the ego car should avoid stopping or parking there. Additionally, directional traffic signs on a pole to the right of the ego vehicle signal a junction ahead where the road turns left, informing the ego vehicle of upcoming road geometry and potential merging or crossing traffic.\n\nA median barrier runs along the left side of the roadway opposite the ego vehicle. This barrier separates traffic directions and indicates that the ego car must follow the road to the right, in a manner that it cannot make a left turn there.\n\nLastly, there is a toppled traffic cone and a small bucket on the ground near the corner where the scooters are parked. These objects could become potential hazards if they are moved onto the roadway, so caution should be exercised when passing near them."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This object is a trash can, typically used for disposal of waste in public areas. In a driving scenario, drivers should be aware of its presence as it signifies that there might be pedestrians nearby who could be using the bin, potentially leading to increased pedestrian activity around the area.",
+            "box": [
+                573,
+                644,
+                45,
+                17
+            ],
+            "category_name": "garbage"
+        },
+        "2": {
+            "description and explanation": "This object is a miscellaneous point of interest, perhaps a street fixture or sign partially obscured. Such objects require driver attention as they might be indicators of street directions, rules, or warnings that are essential for navigating the road safely and complying with local traffic laws.",
+            "box": [
+                614,
+                609,
+                65,
+                48
+            ],
+            "category_name": "misc"
+        },
+        "3": {
+            "description and explanation": "This object is a pile of garbage on the side of the road. It appears to consist of various discarded items. Drivers and pedestrians should be cautious as it could potentially obstruct part of the sidewalk and the edge of the road, causing pedestrians to move closer to the roadway or vehicles to swerve slightly to avoid it. It also may attract animals or pests which could distract drivers or lead to unpredictable road conditions.",
+            "box": [
+                608,
+                663,
+                30,
+                17
+            ],
+            "category_name": "garbage"
+        }
+    },
+    "driving_suggestion": "Maintain a steady speed while monitoring the parked scooters for any signs of movement. Follow road signage and continue to the right as indicated by the road layout and barriers, avoiding any illegal parking. Exercise caution when approaching the corner with the toppled cone and bucket to avoid any potential obstacles in the roadway."
+}

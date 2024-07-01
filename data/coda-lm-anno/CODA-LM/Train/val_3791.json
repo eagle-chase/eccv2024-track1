@@ -1,0 +1,65 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "Parked cars on the side of the road, appearing stationary with no visible occupants or intention to move.",
+                "explanation": "These vehicles reduce the width of the usable road and could potentially obscure pedestrians stepping into the road."
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [
+            {
+                "description": "A series of bicycles and scooters parked on the side of the road, intermingled with the parked cars.",
+                "explanation": "These objects could potentially fall into the path of the vehicle or obscure a pedestrian or animal."
+            }
+        ],
+        "description and explanation": "The traffic image presents a scenario with parked cars along the side of the road, which appear stationary and are not showing any signs of movement, indicating that there are no occupants preparing to drive away. The presence of these vehicles limits the available road space for driving and raises the concern that pedestrians might be hidden from view when stepping onto the roadway.\n\nAdditionally, there are bicycles and scooters parked on the side of the road amongst the parked cars. These objects pose a risk as they could fall into the vehicle's path, causing obstructions or hazards. They also have the potential to conceal a pedestrian or an animal from the driver's view, which would necessitate cautious driving near these objects to prevent accidents."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This object is a car parked on the side of the road. Its presence requires the ego car to maintain a proper lane and avoid swerving too close to the parked car to prevent any potential collisions or scraping against the parked vehicle.",
+            "box": [
+                1,
+                483,
+                195,
+                237
+            ],
+            "category_name": "car"
+        },
+        "2": {
+            "description and explanation": "This object is a moped, also parked on the side of the street. Similar to the car, the presence of the parked moped guides the ego car to maintain its lane carefully and keep a safe distance, especially as mopeds are smaller and might be less visible at night.",
+            "box": [
+                737,
+                561,
+                159,
+                159
+            ],
+            "category_name": "moped"
+        },
+        "3": {
+            "description and explanation": "This object is a parked car on the side of a road. As a dark-colored sedan with visible rear lights, it is stationary, possibly indicating non-usage or temporary parking. The presence of this parked car may influence the ego cars driving behavior by suggesting the need for increased awareness and cautious speed to avoid potential unforeseen movements from the parked vehicle or opening of its doors.",
+            "box": [
+                198,
+                473,
+                150,
+                145
+            ],
+            "category_name": "car"
+        },
+        "4": {
+            "description and explanation": "This object is a moped parked alongside the road, next to other mopeds. It features a noticeable cover over the seat, which could imply an attempt to protect it from weather conditions. The presence of the moped, especially in a grouped parking scenario like this, requires the ego car to navigate carefully, maintaining a safe distance to prevent any contact or interference with the mopeds.",
+            "box": [
+                567,
+                549,
+                134,
+                85
+            ],
+            "category_name": "moped"
+        }
+    },
+    "driving_suggestion": "Proceed with caution, maintaining a lower speed to account for potential slick road conditions and possible unseen hazards due to parked vehicles and bicycles. Preparedness to stop quickly is advised in case a pedestrian emerges from behind the parked cars. No abrupt maneuvers should be made to avoid skidding."
+}

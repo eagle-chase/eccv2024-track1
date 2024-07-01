@@ -1,0 +1,40 @@
+{
+    "general_perception": {
+        "vehicles": [],
+        "vulnerable_road_users": [
+            {
+                "description": "一只狗出现在路中央，正从本车前方走开。",
+                "explanation": "这种动物行为可能不可预测，可能会改变方向或停下，构成潜在危险。"
+            }
+        ],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "在给定的交通图像中，可以看到一只狗在道路中间，正背对着自车方向行走。这个动物可能难以预料，可能会改变方向或停下来，构成潜在的危险。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这个物体是一只狗，目前位于道路中央，面对着迎面而来的车辆。它的存在要求司机特别小心。司机应该减速，并在必要时准备停车，以避免与动物相撞。动物的不可预测性意味着司机应保持警觉和注意，直到狗安全地离开道路。",
+            "box": [
+                517,
+                546,
+                23,
+                54
+            ],
+            "category_name": "dog"
+        },
+        "2": {
+            "description and explanation": "这个物体是位于路边的垃圾桶。虽然它不直接阻碍车辆通行，但驾驶员需要注意这类路边物体，并保持安全距离以避免任何潜在危险，例如不慎扔到道路上的垃圾或突然有人使用垃圾桶时造成的动作。",
+            "box": [
+                305,
+                489,
+                68,
+                90
+            ],
+            "category_name": "dustbin"
+        }
+    },
+    "driving_suggestion": "若动物构成危险时降低车速并准备停车。注意其他潜在道路使用者，由于路况和光线条件，他们可能不易被发现。确保车头灯已开启并调整至最佳照明效果。如有必要，可使用喇叭促使狗让路。"
+}

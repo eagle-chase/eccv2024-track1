@@ -1,0 +1,30 @@
+{
+    "general_perception": {
+        "vehicles": [],
+        "vulnerable_road_users": [
+            {
+                "description": "前方道路中央有一只动物，可能是条狗，正被车头灯照亮。",
+                "explanation": "动物出现在道路上对它自身和车辆都构成潜在危险，需要小心驾驶。"
+            }
+        ],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "在这张交通图像中，中路前方似乎有一只狗，它被车辆的前灯照亮。路上有动物的存在是一个潜在的危险，因为这可能会危及到它自己和行驶中的车辆，需要驾驶员小心行驶。图像中没有其他会影响驾驶行为的车辆、交通标志、交通灯、交通锥、障碍物或其它物体。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这是一只在道路上站立或移动的家养动物，具体来说是一条狗。狗的行为可能不可预测，可能会突然移动，因此，当发现这种情况时，驾驶员应该减速并做好必要时停车的准备，以防止发生事故或对动物造成伤害。",
+            "box": [
+                709,
+                569,
+                43,
+                40
+            ],
+            "category_name": "dog"
+        }
+    },
+    "driving_suggestion": "减速并准备停车或小心绕过道路上的动物。如有必要，使用远光灯以提高能见度，同时不影响其他道路使用者。继续监控动物的动向，一旦道路清晰，谨慎行驶，确保不惊吓或伤害动物。"
+}

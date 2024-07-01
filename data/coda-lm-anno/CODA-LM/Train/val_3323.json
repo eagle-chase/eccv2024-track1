@@ -1,0 +1,34 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "Large orange school bus in close proximity on the left side of the ego vehicle, in motion, partially in view.",
+                "explanation": "The proximity and size of the school bus may obscure the driver's view of that side and represent a potential hazard if lane changes are needed. Moreover, as a moving vehicle, it's essential to maintain a safe distance."
+            },
+            {
+                "description": "White commercial truck on the right side of the ego vehicle, fully in view, appears to be moving in a parallel direction.",
+                "explanation": "Trucks often have larger blind spots and can make sudden moves. Keeping a safe following distance and being cautious when overtaking is important."
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "The traffic image shows the presence of two vehicles. On the left side of the ego vehicle, there's a large orange school bus in motion and partially in view. The proximity and size of the school bus can obscure the driver's view on that side and represent a potential hazard if lane changes are needed. It's crucial to maintain a safe distance due to the bus being a moving vehicle. On the right side of the ego vehicle, there is a white commercial truck moving in a parallel direction and fully in view. Trucks usually have larger blind spots and can make sudden moves, which necessitates keeping a safe following distance and being cautious when overtaking. There are no vulnerable road users, traffic signs, traffic lights, traffic cones, barriers, or other objects detected in the image."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This object is the rear section of a school bus, visible due to its distinctive orange color and structural features such as rear lights and emergency exit door details. The presence of this school bus influences driving behavior by indicating that the driver should maintain a cautious speed and be alert for possible stops or turns by the bus, as well as the potential presence of children around the area.",
+            "box": [
+                1,
+                1,
+                1025,
+                719
+            ],
+            "category_name": "truck"
+        }
+    },
+    "driving_suggestion": "Maintain a safe following distance from the school bus, monitor its movements, and be prepared for unexpected stops especially since buses often pick up and drop off passengers. Be aware of the truck's blind spots and avoid lingering next to it. Continue to monitor the environment for any additional road users or changes, and adjust speed and position accordingly while staying within the current lane."
+}

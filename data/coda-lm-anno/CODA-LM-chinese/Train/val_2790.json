@@ -1,0 +1,50 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "前景中有一辆车停在街道上。",
+                "explanation": "停车不应阻碍本车行驶路径，但应注意其存在以便在通过时保持安全距离。"
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "前景中有一辆停在街上的汽车。虽然该停放的汽车不应阻碍自车的行驶路径，但应注意其存在以保持安全距离通过。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这个物体是一个交通锥，通常用于标示交通模式的临时变化或在道路施工或事故周围指示警示区域。其放置可以指导自主车辆改变路径以避开指定区域，从而确保道路工人和其他驾驶员的安全。",
+            "box": [
+                816,
+                584,
+                37,
+                70
+            ],
+            "category_name": "traffic_cone"
+        },
+        "2": {
+            "description and explanation": "这个物体被标记为“杂项”，这表明它可能无法被清晰识别，或者可能是各种各样的道路设备。物体的不明确性意味着本车应谨慎行驶，保持安全的行车距离，并准备根据接近时的更清晰识别或道路状况调整速度或方向。",
+            "box": [
+                316,
+                533,
+                30,
+                27
+            ],
+            "category_name": "misc"
+        },
+        "3": {
+            "description and explanation": "这个物体是一个交通锥，通常用来标示驾驶可能危险的区域或因施工或紧急情况而改变车道使用的地方。这个鲜橙色的圆锥形标志对驾驶员很重要，因为它提示需要减速或绕过障碍物，以保障安全。在这种情况下，交通锥的存在可能表明前方右侧有道路施工或障碍物，提醒本车可能需要变换车道或调整速度以安全通过。",
+            "box": [
+                777,
+                576,
+                32,
+                55
+            ],
+            "category_name": "traffic_cone"
+        }
+    },
+    "driving_suggestion": "在超越停放的车辆时要谨慎行驶，保持安全距离。由于目前没有其他道路使用者或障碍物，本车可以继续以适当的速度行驶，同时保持警惕以防潜在危险。"
+}

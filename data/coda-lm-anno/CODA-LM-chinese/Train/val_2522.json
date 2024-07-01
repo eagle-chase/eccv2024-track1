@@ -1,0 +1,30 @@
+{
+    "general_perception": {
+        "vehicles": [],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [
+            {
+                "description": "一盏路灯在黑暗中亮起。",
+                "explanation": "街灯提供了能见度，但在光线较暗时仍需小心。"
+            }
+        ],
+        "description and explanation": "交通图像中不含任何车辆、弱势道路使用者、交通标志、交通信号灯、交通锥或障碍物。然而，在这个黑暗的环境中，有一盏街灯被点亮了。这盏街灯提供了能见度，但在光线较暗的条件下仍需小心行驶。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "被识别为碎片的物体由各种材料组成，这些材料在路面上不规则地散落。这些材料可能包括车辆部件残余、破碎的路面材料或其他非特定垃圾。这样的碎片对驾驶构成危险，因为它可能导致车辆失去牵引力，引起轮胎损坏，或者被卷入空中并对后续车辆造成损害。为了应对这一情况，本车（从其视角捕捉图像的车辆）应减速并安全绕过碎片，以避免潜在的损害并保持车辆控制。",
+            "box": [
+                421,
+                597,
+                288,
+                123
+            ],
+            "category_name": "debris"
+        }
+    },
+    "driving_suggestion": "由于前方道路上有不明物体，请极为谨慎行驶。减速并时刻准备安全停车或变换车道以避开潜在危险。保持与前车安全距离。谨慎使用远光灯，以免眩目对向来车。"
+}

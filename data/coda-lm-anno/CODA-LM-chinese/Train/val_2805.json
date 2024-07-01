@@ -1,0 +1,30 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "一辆大型施工车辆，其后部有一个抬起的斗，挡住了前方道路的一部分。",
+                "explanation": "这辆大型车辆部分阻挡道路，需要谨慎驾驶，可能要变换车道或减速以安全绕行。"
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "在这张交通图像中，有一辆大型施工车辆，其后部装有一个举起的斗，这阻挡了前方路面的一部分。由于这辆大型车辆部分阻挡了道路，需要格外小心。可能需要变换车道或减速，以便安全绕过这个障碍。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这个物体是一种建筑车辆，具体是一辆通过旋转鼓混合水泥成分的水泥搅拌车。这种车辆出现在道路上通常意味着附近有建筑活动。对于本车未来的驾驶行为，遇到这种建筑车辆将需要更多的谨慎。驾驶员应预料到可能会有减速或停车，尤其是如果该车辆正在进行建筑工作或准备转入工地。保持安全距离并随时准备应对建筑车辆的突发动作是明智的。",
+            "box": [
+                541,
+                232,
+                239,
+                359
+            ],
+            "category_name": "construction_vehicle"
+        }
+    },
+    "driving_suggestion": "接近施工车辆时要谨慎，减速，并在必要时准备变道或安全绕行。保持安全的跟车距离，并对因这条光线昏暗的道路能见度受限而可能出现的任何其他障碍或危险保持警惕。"
+}

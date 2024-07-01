@@ -1,0 +1,30 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "损坏的白色小型车停在路上，没有开灯，正对着本车方向。",
+                "explanation": "这辆车因为挡住了车道并且车灯熄灭可能对其他道路使用者不可见，是一个潜在的危险。"
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "在交通图像中，有一辆受损的白色两厢车停在路上，车灯熄灭，面向自车（ego vehicle）的方向。由于车灯关闭，这辆车可能对其他道路使用者不够显眼，因此它阻碍了车道并构成了潜在危险。图像中没有出现任何易受伤害的道路使用者、交通标志、红绿灯、交通锥、障碍物或其他物体。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "该物体是一款紧凑型厢式车，其封闭式车身适合运载乘客或货物，体积大于标准轿车但小于全尺寸厢车。这类车辆可能因其加速较慢和盲区较大而影响驾驶行为。特别是当本车需要在交通中绕行或紧跟时，需要仔细监控。",
+            "box": [
+                335,
+                379,
+                427,
+                315
+            ],
+            "category_name": "tricycle"
+        }
+    },
+    "driving_suggestion": "小心行驶，显著减速，如可能，短暂开启远光灯以进一步评估情况。准备停车或绕过障碍物，在此之前确保相邻车道无车。使用危险报警灯来提醒其他司机前方可能的危险。"
+}

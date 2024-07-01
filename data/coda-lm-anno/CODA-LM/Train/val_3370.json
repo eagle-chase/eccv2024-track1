@@ -1,0 +1,40 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "A large construction vehicle with a crane attachment directly in front of the ego car, occupying the entire lane.",
+                "explanation": "This vehicle's size and position will prevent the ego car from proceeding forward in its current lane, necessitating a lane change."
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [
+            {
+                "description": "A right turn only sign seen on the right side of the road, above the green traffic light.",
+                "explanation": "Indicates that the lane the ego car is currently in is designated for right turns only, which must be followed to abide by traffic rules."
+            }
+        ],
+        "traffic lights": [
+            {
+                "description": "Green traffic light positioned directly ahead on the right side above the road.",
+                "explanation": "Signals that vehicles facing the light are permitted to proceed, but considering the right turn only sign, it applies to turning vehicles."
+            }
+        ],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "The traffic scenario in front of the ego car features a large construction vehicle with a crane attachment that is positioned directly in front of it, covering the entire lane. The presence of this construction vehicle is significant as it completely obstructs the ego car's path, necessitating a change of lanes in order for the vehicle to continue its journey.\n\nAdjacent to this setting, there is a traffic sign indicating that a right turn is mandatory. It is located on the right side of the road above the green traffic light. The implication of the sign is that the ego car, which is situated in the lane under this sign, is obliged to turn right to comply with traffic regulations.\n\nFurther complementing the traffic sign, there is a green traffic light placed directly ahead on the right side above the road. This green light authorizes the vehicles facing it to proceed with the caveat that the movement is restricted to right turns only, in alignment with the sign for the current lane of the ego car."
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "This object is a public bus, identifiable by its large structure and distinct color often used for public transportation. For an ego car in traffic, the presence of a bus can significantly influence driving decisions, mainly due to its frequent stops and the potential for passengers to board or alight, which may require slowing down or stopping behind it until it resumes motion.",
+            "box": [
+                166,
+                429,
+                46,
+                39
+            ],
+            "category_name": "bus"
+        }
+    },
+    "driving_suggestion": "The ego car should check the mirrors and blind spots for a safe lane change to the left to go around the construction vehicle. After the lane change, maintain a safe distance from the construction vehicle and proceed with caution. If the intention was to turn right, follow the lane rules indicated by the right turn only sign and wait for the lane to clear or consider an alternate route if possible."
+}

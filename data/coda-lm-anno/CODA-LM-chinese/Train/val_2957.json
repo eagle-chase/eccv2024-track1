@@ -1,0 +1,40 @@
+{
+    "general_perception": {
+        "vehicles": [
+            {
+                "description": "一辆建筑车辆（推土机）位于自车的左侧，面向自车。",
+                "explanation": "其位置暗示前方可能有道路施工或障碍物。"
+            }
+        ],
+        "vulnerable_road_users": [],
+        "traffic signs": [],
+        "traffic lights": [],
+        "traffic cones": [],
+        "barriers": [],
+        "other objects": [],
+        "description and explanation": "这幅图像展示了一辆工程车辆，具体来说是一辆推土机，位于左侧并朝向自车的方向。工程车辆的存在预示着可能会有道路施工或前方可能出现的障碍物，这影响了驾驶行为，暗示着需要谨慎驾驶，或许需要减速或绕行可能的阻碍。场景中没有显示其他道路使用者、交通标志、红绿灯、交通锥、障碍物或其他物体。"
+    },
+    "region_perception": {
+        "1": {
+            "description and explanation": "这个物体是一辆工程车辆，其坚固的设计和较大的尺寸通常用于建筑工地。这辆车出现在道路上表明正在进行的建设活动，可能会影响驾驶行为，因为它可能引入潜在危险，如不平的路面或意外的障碍物。驾驶员必须保持谨慎，可能需要减速，并注意在施工区周围可能会突然停车或绕行。",
+            "box": [
+                2,
+                411,
+                357,
+                232
+            ],
+            "category_name": "construction_vehicle"
+        },
+        "2": {
+            "description and explanation": "这个物体是一辆工程车辆，通常用于道路或附近工地的重型任务和建筑工作。因其存在，本车应提高警惕，并可能需要减速，以确保安全绕过施工区域，同时考虑到这类车辆可能会突然移动或阻碍正常交通流。",
+            "box": [
+                400,
+                472,
+                273,
+                152
+            ],
+            "category_name": "construction_vehicle"
+        }
+    },
+    "driving_suggestion": "减速，注意可能出现的突发路况或障碍，并提高警惕以便根据施工情况作出相应的指示或绕行。"
+}
