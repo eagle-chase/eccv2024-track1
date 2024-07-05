@@ -186,7 +186,7 @@ if __name__ == "__main__":
     
     all_score = []
     rets = []
-    for idx, json_name in tqdm(enumerate(json_list)):
+    for idx, json_name in enumerate(tqdm(json_list)):
         assert idx == int(answers[idx]['question_id'])
         message= dict()
         message["prediction"] = answers[idx]['answer']
@@ -198,7 +198,7 @@ if __name__ == "__main__":
         rets.append(ret)
         
     results = batcher.handle_message_list(rets)
-    for idx, json_name in tqdm(enumerate(json_list)):
+    for idx, json_name in enumerate(tqdm(json_list)):
         output = results[idx]
         txt_name = json_name.replace(".json", ".txt")
         if output == None:
