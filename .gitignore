@@ -1,4 +1,4 @@
 .eval/data/
-data/
-model/
+.model/
 .vscode/
+__pycache__/

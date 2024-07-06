@@ -1,17 +1,4 @@
-import json
 import argparse
-
-
-def load_json(path: str):
-    with open(path, 'r') as file:
-        data = [json.loads(line) for line in file]
-    return data
-
-def save_json(path: str, data: any):
-    with open(path, 'w') as file:
-        for obj in data:
-            line = json.dumps(obj)
-            file.write(line + '\n')
 
 def parse_args():
     parser = argparse.ArgumentParser()
