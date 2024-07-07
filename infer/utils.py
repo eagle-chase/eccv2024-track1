@@ -2,6 +2,9 @@ import argparse
 
 def parse_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--llava_model_path", type=str, required=True)
+    parser.add_argument("--llm_model_path", type=str, required=True)
+    parser.add_argument("--visual_encoder_path", type=str, required=True)
     parser.add_argument("--input-path", type=str, required=True)
     parser.add_argument("--image-root", type=str, default=None)
     parser.add_argument("--model-path", type=str, default=None)

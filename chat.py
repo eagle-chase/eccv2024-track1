@@ -11,7 +11,7 @@ prompt = ("<|start_header_id|>user<|end_header_id|>\n\n<image>\nWhat are these?<
 image_file = "http://images.cocodataset.org/val2017/000000039769.jpg"
 
 # 
-model_path = 'model/llava-llama-3-8b-v1_1-transformers'
+model_path = 'model/llava-llama-3-8b-finetune'
 model = LlavaForConditionalGeneration.from_pretrained(
     model_path, 
     torch_dtype=torch.float16, 

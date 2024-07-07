@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES="2,3,4,5" NPROC_PER_NODE=4 xtuner train /data/home/ouyangmt/eccv2024-track1/xtuner/projects/llava_llama3/configs/llava_llama3_8b_instruct_qlora_clip_vit_large_p14_336_e1_gpu1_finetune_copy.py --deepspeed deepspeed_zero2

@@ -29,15 +29,15 @@ pretrained_pth = "./model/llava_iter_2181_new.pth"
 
 # Data
 data_root = './data/coda-lm/'
-data_path = data_root + 'CODA-LM/Mini/vqa_anno/driving_suggestion_llava.json'
+data_path = data_root + 'CODA-LM/Train/vqa_anno/all_llava.json'
 image_folder = data_root
 prompt_template = PROMPT_TEMPLATE.llama3_chat
 max_length = int(2048 - (336 / 14)**2)
 
 # Scheduler & Optimizer
-batch_size = 1  # per_device
+batch_size = 3  # per_device
 accumulative_counts = 128
-dataloader_num_workers = 0
+dataloader_num_workers = 8
 max_epochs = 1
 optim_type = AdamW
 lr = 2e-4
