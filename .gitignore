@@ -1,4 +1,4 @@
 .eval/data/
-.model/
+llava_model/
 .vscode/
 __pycache__/
