@@ -51,11 +51,11 @@ def main():
 
     question_list, image_path_list, origin_data = load_input(args.input_path, args.image_root)
 
-    origin_data = origin_data[:10]
+    origin_data = origin_data
     
     infer_output = model_infer(
-        question_list=question_list[:10],
-        image_path_list=image_path_list[:10],
+        question_list=question_list,
+        image_path_list=image_path_list,
         model_path=args.model_path,
         device_id=args.device_id,
     )
