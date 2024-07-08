@@ -1,4 +1,4 @@
-.eval/data/
+eval/data*
 llava_model/
 .vscode/
 __pycache__/
