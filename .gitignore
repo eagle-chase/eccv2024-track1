@@ -1,4 +1,4 @@
-eval/data*
-llava_model/
+/eval/data
+/model/
 .vscode/
 __pycache__/
