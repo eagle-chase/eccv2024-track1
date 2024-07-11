@@ -22,19 +22,20 @@ from xtuner.utils import PROMPT_TEMPLATE
 #                          PART 1  Settings                           #
 #######################################################################
 # Model
-llm_name_or_path = '/data/home/ouyangmt/eccv2024-track1/model/Meta-Llama-3-8B-Instruct'
-visual_encoder_name_or_path = '/data/home/ouyangmt/eccv2024-track1/model/clip-vit-large-patch14-336'
+llm_name_or_path = 'model/Meta-Llama-3-8B-Instruct'
+visual_encoder_name_or_path = 'model/clip-vit-large-patch14-336'
 # Specify the pretrained pth
-pretrained_pth = "./model/llava_iter_2181_new.pth"
+pretrained_pth = "model/llama3-tutorial-iter_2181_new/iter_2181_new.pth"
 
 # Data
 data_root = './data/coda-lm/'
-data_path = data_root + 'CODA-LM/Train/vqa_anno/all_llava.json'
+data_path = data_root + 'CODA-LM/Train/vqa_anno/merged_llava.json'
 image_folder = data_root
 prompt_template = PROMPT_TEMPLATE.llama3_chat
 max_length = int(2048 - (336 / 14)**2)
 
-# Scheduler & Optimizer
+# Scheduler & 
+# ptimizer
 batch_size = 3  # per_device
 accumulative_counts = 128
 dataloader_num_workers = 8
@@ -47,11 +48,11 @@ max_norm = 1  # grad clip
 warmup_ratio = 0.03
 
 # Save
-save_steps = 50000
+save_steps = 5000
 save_total_limit = 2  # Maximum checkpoints to keep (-1 means unlimited)
 
 # Evaluate the generation performance during the training
-evaluation_freq = 50000
+evaluation_freq = 5000
 SYSTEM = ''
 evaluation_images = './data/coda-lm/test/images/0001.jpg'
 evaluation_inputs = ['Please describe this picture']

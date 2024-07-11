@@ -20,20 +20,20 @@ from xtuner.utils import PROMPT_TEMPLATE
 #                          PART 1  Settings                           #
 #######################################################################
 # Model
-llm_name_or_path = '/data/home/ouyangmt/eccv2024-track1/model/Meta-Llama-3-8B-Instruct'
-visual_encoder_name_or_path = '/data/home/ouyangmt/eccv2024-track1/model/clip-vit-large-patch14-336'
+llm_name_or_path = 'model/Meta-Llama-3-8B-Instruct'
+visual_encoder_name_or_path = 'model/clip-vit-large-patch14-336'
 # Specify the pretrained pth
-pretrained_pth = "./model/llava_iter_2181_new.pth"
+pretrained_pth = "model/llama3-tutorial-iter_2181_new/iter_2181_new.pth"
 
 # Data
 data_root = './data/coda-lm/'
-data_path = data_root + 'CODA-LM/Train/vqa_anno/all_llava.json'
+data_path = data_root + 'CODA-LM/Train/vqa_anno/merged_llava.json'
 image_folder = data_root
 prompt_template = PROMPT_TEMPLATE.llama3_chat
 max_length = int(2048 - (336 / 14)**2)
 
 # Scheduler & Optimizer
-batch_size = 8  # per_device
+batch_size = 1  # per_device
 accumulative_counts = 2
 dataloader_num_workers = 4
 max_epochs = 4
@@ -70,8 +70,8 @@ image_processor = dict(
 
 model = dict(
     type=LLaVAModel,
-    freeze_llm=False,
-    freeze_visual_encoder=False,
+    freeze_llm=True,
+    freeze_visual_encoder=True,
     pretrained_pth=pretrained_pth,
     llm=dict(
         type=AutoModelForCausalLM.from_pretrained,

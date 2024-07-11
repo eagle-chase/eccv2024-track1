@@ -1,5 +1,0 @@
-FINETUNE_CFG='xtuner/projects/llava_llama3/configs/llava_llama3_8b_instruct_qlora_clip_vit_large_p14_336_e4_gpu8_finetune.py'
-PTH_PATH='work_dirs/llava_llama3_8b_instruct_qlora_clip_vit_large_p14_336_e4_gpu8_finetune/iter_5632.pth'
-SAVE_PATH='model/llava_llama3_8b_instruct_qlora_clip_vit_large_p14_336_e4_gpu8_finetune'
-
-xtuner convert pth_to_hf $FINETUNE_CFG $PTH_PATH $SAVE_PATH
