@@ -1,5 +1,7 @@
 # LLAVA
 
+benchmark_finetune_config = xtuner/projects/llava_llama3/configs/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune.py
+
 环境配置
 ```
 conda create --name xtuner python=3.10 -y
