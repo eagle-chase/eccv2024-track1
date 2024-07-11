@@ -1,0 +1,16 @@
+{
+    "model_name": "llama3",
+    "system": "<|start_header_id|>system<|end_header_id|>\n\n",
+    "meta_instruction": "",
+    "eosys": "",
+    "user": "<|start_header_id|>user<|end_header_id|>\n\n",
+    "eoh": "",
+    "assistant": "<|start_header_id|>assistant<|end_header_id|>\n\n",
+    "eoa": "",
+    "separator": "\n",
+    "capability": "chat",
+    "stop_words": [
+        "<|eot_id|>",
+        "<|eot_id|>"
+    ]
+}
