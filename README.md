@@ -7,10 +7,11 @@ conda activate xtuner
 cd xtuner
 pip install -e '.[deepspeed]'
 
-pip install 'lmdeploy>=0.4.0'
+pip install lmdeploy==0.4.2
 pip install git+https://github.com/haotian-liu/LLaVA.git --no-deps
 
 pip install streamlit
+
 ```
 
 官方llava模型（未微调）
@@ -23,8 +24,6 @@ cd llava-llama-3-8b-v1_1-transformers
 git lfs pull
 ```
 
-
-0.4.2
 训练
 ```
 source env.sh
