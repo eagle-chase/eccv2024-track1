@@ -28,12 +28,14 @@ pretrained_pth = "model/llama3-tutorial-iter_2181_new/iter_2181_new.pth"
 # Data
 data_root = './data/coda-lm/'
 data_path = data_root + 'CODA-LM/Train/vqa_anno/merged_llava.json'
+
 image_folder = data_root
 prompt_template = PROMPT_TEMPLATE.llama3_chat
 max_length = 4096
 # max_length = int(2048 - (336 / 14)**2)
 
 # Scheduler & Optimizer
+
 batch_size = 5  # per_device
 accumulative_counts = 2
 dataloader_num_workers = 4
@@ -209,3 +211,5 @@ randomness = dict(seed=None, deterministic=False)
 
 # set log processor
 log_processor = dict(by_epoch=False)
+
+
