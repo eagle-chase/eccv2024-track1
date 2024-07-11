@@ -1,13 +1,11 @@
 # Copyright (c) OpenMMLab. All rights reserved.
-import torch
 from mmengine.hooks import (CheckpointHook, DistSamplerSeedHook, IterTimerHook,
                             LoggerHook, ParamSchedulerHook)
 from mmengine.optim import AmpOptimWrapper, CosineAnnealingLR, LinearLR
 from peft import LoraConfig
 from torch.optim import AdamW
 from transformers import (AutoModelForCausalLM, AutoTokenizer,
-                          BitsAndBytesConfig, CLIPImageProcessor,
-                          CLIPVisionModel)
+                          CLIPImageProcessor, CLIPVisionModel)
 
 from xtuner.dataset import LLaVADataset
 from xtuner.dataset.collate_fns import default_collate_fn
@@ -22,22 +20,23 @@ from xtuner.utils import PROMPT_TEMPLATE
 #                          PART 1  Settings                           #
 #######################################################################
 # Model
-llm_name_or_path = '/data/home/ouyangmt/eccv2024-track1/model/Meta-Llama-3-8B-Instruct'
-visual_encoder_name_or_path = '/data/home/ouyangmt/eccv2024-track1/model/clip-vit-large-patch14-336'
+llm_name_or_path = 'model/Meta-Llama-3-8B-Instruct'
+visual_encoder_name_or_path = 'model/clip-vit-large-patch14-336'
 # Specify the pretrained pth
-pretrained_pth = "./model/llava_iter_2181_new.pth"
+pretrained_pth = "model/llama3-tutorial-iter_2181_new/iter_2181_new.pth"
 
 # Data
 data_root = './data/coda-lm/'
-data_path = data_root + 'CODA-LM/Train/vqa_anno/all_llava.json'
+data_path = data_root + 'CODA-LM/Train/vqa_anno/merged_llava.json'
 image_folder = data_root
 prompt_template = PROMPT_TEMPLATE.llama3_chat
-max_length = int(2048 - (336 / 14)**2)
+max_length = 4096
+# max_length = int(2048 - (336 / 14)**2)
 
 # Scheduler & Optimizer
-batch_size = 3  # per_device
-accumulative_counts = 128
-dataloader_num_workers = 8
+batch_size = 5  # per_device
+accumulative_counts = 2
+dataloader_num_workers = 4
 max_epochs = 4
 optim_type = AdamW
 lr = 2e-4
@@ -47,11 +46,11 @@ max_norm = 1  # grad clip
 warmup_ratio = 0.03
 
 # Save
-save_steps = 50000
+save_steps = 1000
 save_total_limit = 2  # Maximum checkpoints to keep (-1 means unlimited)
 
 # Evaluate the generation performance during the training
-evaluation_freq = 50000
+evaluation_freq = 1000
 SYSTEM = ''
 evaluation_images = './data/coda-lm/test/images/0001.jpg'
 evaluation_inputs = ['Please describe this picture']
@@ -72,33 +71,20 @@ image_processor = dict(
 
 model = dict(
     type=LLaVAModel,
-    freeze_llm=False,
-    freeze_visual_encoder=False,
+    freeze_llm=True,
+    freeze_visual_encoder=True,
     pretrained_pth=pretrained_pth,
     llm=dict(
         type=AutoModelForCausalLM.from_pretrained,
         pretrained_model_name_or_path=llm_name_or_path,
-        trust_remote_code=True,
-        torch_dtype=torch.float16,
-        quantization_config=dict(
-            type=BitsAndBytesConfig,
-            load_in_4bit=True,
-            load_in_8bit=False,
-            llm_int8_threshold=6.0,
-            llm_int8_has_fp16_weight=False,
-            bnb_4bit_compute_dtype=torch.float16,
-            bnb_4bit_use_double_quant=True,
-            bnb_4bit_quant_type='nf4')),
+        trust_remote_code=True),
     llm_lora=dict(
-        type=LoraConfig,
-        r=64,
-        lora_alpha=16,
-        lora_dropout=0.05,
-        bias='none',
-        task_type='CAUSAL_LM'),
+        type=LoraConfig, r=256, lora_alpha=256, lora_dropout=0.05, bias='none', task_type='CAUSAL_LM'),
     visual_encoder=dict(
         type=CLIPVisionModel.from_pretrained,
-        pretrained_model_name_or_path=visual_encoder_name_or_path))
+        pretrained_model_name_or_path=visual_encoder_name_or_path),
+    visual_encoder_lora=dict(
+        type=LoraConfig, r=64, lora_alpha=16, lora_dropout=0.05, bias='none'))
 
 #######################################################################
 #                      PART 3  Dataset & Dataloader                   #
@@ -118,6 +104,7 @@ llava_dataset = dict(
 train_dataloader = dict(
     batch_size=batch_size,
     num_workers=dataloader_num_workers,
+    pin_memory=True,
     dataset=llava_dataset,
     sampler=dict(
         type=LengthGroupedSampler,

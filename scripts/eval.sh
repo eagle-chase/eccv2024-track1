@@ -16,7 +16,7 @@ python eval/evaluation/stage2_eval_batch.py --reference_path $ROOT_TO_GT \
 --model_name gpt-4o-2024-05-13 \
 --api_key $OPENAI_KEY \
 --api_base_url $API_BASE_URL
-   
+
 # python eval/evaluation/convert2eval.py --reference_path $ROOT_TO_GT \
 # --prediction_path $ROOT_TO_RESULTS/region_perception.jsonl \
 
