@@ -9,9 +9,6 @@ pip install -e '.[deepspeed]'
 
 pip install lmdeploy==0.4.2
 pip install git+https://github.com/haotian-liu/LLaVA.git --no-deps
-
-pip install streamlit
-
 ```
 
 官方llava模型（未微调）
@@ -42,5 +39,4 @@ bash scripts/convert_pth_to_official.sh
 python infer/hf_lmdeploy_infer.py
 
 lmdeploy serve gradio --model-name llava model/official/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune
-streamlit run app.py
 ```
