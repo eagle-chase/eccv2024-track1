@@ -19,10 +19,11 @@ def main():
     pipe = pipeline('model/official/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune',
                     chat_template_config=ChatTemplateConfig(model_name='llama3'))
 
+    split = 'Mini'
     input_jsonl_lst = [
-        'data/coda-lm/CODA-LM/Val/vqa_anno/driving_suggestion.jsonl',
-        'data/coda-lm/CODA-LM/Val/vqa_anno/general_perception.jsonl',
-        'data/coda-lm/CODA-LM/Val/vqa_anno/region_perception.jsonl',
+        f'data/coda-lm/CODA-LM/{split}/vqa_anno/driving_suggestion.jsonl',
+        f'data/coda-lm/CODA-LM/{split}/vqa_anno/general_perception.jsonl',
+        f'data/coda-lm/CODA-LM/{split}/vqa_anno/region_perception.jsonl',
     ]
     for input_path in input_jsonl_lst:
         image_root = 'data/coda-lm/'
@@ -41,7 +42,9 @@ def main():
         for idx in range(len(infer_output)):
             origin_data[idx]["answer"] = infer_output[idx]
         
-        save_jsonl(os.path.join('data/results/infer', input_path.split('/')[-1]), origin_data)
+        if not os.path.exists(f'data/results/{split}'):
+            os.makedirs(f'data/results/{split}')
+        save_jsonl(os.path.join(f'data/results/pred/{split}', input_path.split('/')[-1]), origin_data)
 
 
 if __name__ == '__main__':
