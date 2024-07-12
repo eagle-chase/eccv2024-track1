@@ -37,3 +37,5 @@ print('Driving Suggestion Score:', driving_suggestion_score)
 print('Region Perception Score:', region_perception_score)
 print(region_score_dict)
 
+final_score = (driving_suggestion_score + region_perception_score + general_perception_score) / 3
+print('Final Score:', final_score)
