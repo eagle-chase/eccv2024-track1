@@ -27,3 +27,5 @@ python eval/evaluation/stage3_eval_batch.py --reference_path $ROOT_TO_GT \
 --model_name gpt-4o-2024-05-13 \
 --api_key $OPENAI_KEY \
 --api_base_url $API_BASE_URL
+
+python eval/merge_score.py

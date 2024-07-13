@@ -2,7 +2,7 @@
 export PYTHONPATH="${PYTHONPATH}:${PWD}"
 LLM_PATH='model/Meta-Llama-3-8B-Instruct'
 VISUAL_ENCODER_PATH='model/clip-vit-large-patch14-336'
-LLAVA_PATH='model/llava_llama3_8b_instruct_qlora_clip_vit_large_p14_336_e4_gpu8_finetune'
+LLAVA_PATH='model/xtuner/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune'
 
 # ======================= xtuner infer =======================
 
@@ -14,7 +14,7 @@ python infer/inference.py \
     --save-path eval/result/pred \
     --task-name driving_suggestion \
     --model-type xtuner \
-    # --visual_encoder_path $VISUAL_ENCODER_PATH \
+    --visual_encoder_path $VISUAL_ENCODER_PATH \
 
 # python infer/inference.py \
 #     --llava_model_path $LLAVA_PATH \

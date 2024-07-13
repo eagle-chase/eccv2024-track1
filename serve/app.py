@@ -1,15 +1,18 @@
 import streamlit as st
-from lmdeploy import pipeline, ChatTemplateConfig
-from lmdeploy.vl import load_image
 from PIL import Image
+from serve.model import LLaVA
 from common_utils import load_jsonl
 import os
-
+from xtuner.dataset.utils import load_image
 # 加载模型
 @st.cache(allow_output_mutation=True)
 def load_model():
-    return pipeline('model/official/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune',
-                    chat_template_config=ChatTemplateConfig(model_name='llama3'))
+    model = LLaVA(
+        llm_model_path="model/Meta-Llama-3-8B-Instruct",
+        visual_encoder_path="model/clip-vit-large-patch14-336",
+        llava_model_path="model/xtuner/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune",
+    )
+    return model
 
 def load_input(input_path: str, image_root: str):
     data = load_jsonl(input_path)
@@ -36,12 +39,11 @@ def main():
         if selected_index < len(question_list):
             question = question_list[selected_index]
             image_path = image_path_list[selected_index]
-            image = Image.open(image_path)
+            image = load_image(image_path)
             st.image(image, caption='Input Image.', use_column_width=True)
             st.write("Question: ", question)
-            response = model([(question, load_image(image_path))])
-            infer_text = [r.text for r in response]
-            st.write("Inference Result: ", infer_text[0])
+            response = model(image, question)
+            st.write("Inference Result: ", response)
         else:
             st.write("No more images to infer.")
     else:

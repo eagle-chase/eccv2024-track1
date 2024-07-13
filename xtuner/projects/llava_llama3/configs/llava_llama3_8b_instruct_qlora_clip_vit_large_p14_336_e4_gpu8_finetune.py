@@ -25,7 +25,7 @@ from xtuner.utils import PROMPT_TEMPLATE
 llm_name_or_path = 'model/Meta-Llama-3-8B-Instruct'
 visual_encoder_name_or_path = 'model/clip-vit-large-patch14-336'
 # Specify the pretrained pth
-pretrained_pth = "model/llama3-tutorial-iter_2181_new/iter_2181_new.pth"
+pretrained_pth = "model/llava_iter_2181_new.pth"
 
 # Data
 data_root = './data/coda-lm/'
@@ -36,7 +36,7 @@ max_length = int(2048 - (336 / 14)**2)
 
 # Scheduler & 
 # ptimizer
-batch_size = 3  # per_device
+batch_size = 1  # per_device
 accumulative_counts = 128
 dataloader_num_workers = 8
 max_epochs = 4
