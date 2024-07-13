@@ -130,7 +130,7 @@ class GPTBatcher:
         
         self.client = OpenAI(api_key=api_key, base_url = api_base_url)
         self.model_name = model_name
-        self.system_prompt = system_prompt
+        self.system_prompt = "You are an impartial judge tasked with evaluating text similarity and relevance of the reference text and autonomous driving AI assistant's predicted text. Be as objective as possible. Do not allow the length of the predicted text to influence your evaluation. After providing your short explanation, you must rate on a scale from 1 to 10 by strictly following this format: \"[[rating]]\", for example: \"Rating: [[10]]\"."
         self.temperature = temperature
         self.num_workers = num_workers
         self.timeout_duration = timeout_duration
@@ -214,6 +214,22 @@ class GPTBatcher:
     def get_miss_index(self):
         return self.miss_index
 
+    def create_messages(self, message):
+        ret = []
+        # system prompt
+        ret.append({
+            "role": "system",
+            "content": self.system_prompt
+        })
+
+        template = "[The Start of Reference Text]\n{}\n[The End of Reference Text]\n\n[The Start of Prediction Text]\n{}\n[The End of Prediction Text]"
+
+        ret.append({
+            "role": "user", 
+            "content": template.format(message["reference"], message["prediction"])
+        })
+
+        return ret
 
 if __name__ == "__main__":
   
