@@ -1,0 +1,46 @@
+### Region Perception Task Prompt
+
+#### Task Objective:
+This task aims to evaluate MLLMs' capability to understand and describe corner objects within specific bounding boxes, and to explain why these objects might affect self-driving behavior. The goal is to provide a detailed perception analysis for the objects highlighted in the provided bounding boxes.
+
+#### Instructions for the Model:
+You are an experienced driver tasked with analyzing objects within specific bounding boxes in a given traffic scene. The scene is captured from the perspective of the ego car. Focus your analysis on the objects inside the red rectangles.
+
+#### Prompt:
+
+**Context**:
+- You will be given an image depicting a traffic scene from the perspective of the ego car.
+- The objects you need to focus on are marked with red rectangles in the image.
+
+**Guidelines**:
+1. **Carefully analyze** the objects within the red rectangles.
+2. **Describe** each object's appearance, position, and direction.
+3. **Explain** why each object would affect the ego car's driving behavior.
+
+**Example Question**:
+Please describe the object inside the red rectangle in the image and explain why it affects ego car driving.
+
+**Response Format**:
+For each object within the red rectangle, describe its appearance, position, and direction, followed by an explanation of its impact on driving behavior.
+
+**Example Response**:
+1. **Object**:
+   - **Description**: The object inside the red rectangle is a pedestrian. They are positioned at the edge of the crosswalk on the left side of the road, facing towards the ego car and preparing to cross.
+   - **Impact**: The pedestrian poses a potential hazard as they are about to cross the road, requiring the ego car to yield and ensure their safety before proceeding.
+
+2. **Object**:
+   - **Description**: The object inside the red rectangle is a traffic cone. It is located in the middle of the right lane, standing upright and signaling a construction area.
+   - **Impact**: The traffic cone indicates a need for the ego car to change lanes or slow down, avoiding the area marked by the cone to prevent collision.
+
+3. **Object**:
+   - **Description**: The object inside the red rectangle is a car. It is parked on the right side of the road, facing the same direction as the ego car.
+   - **Impact**: The parked car might obstruct the ego car’s view of pedestrians or other road users, necessitating caution as the ego car approaches this area.
+
+**Notes**:
+- Be precise and clear in your analysis and descriptions.
+- Ensure that your descriptions and explanations are practical and applicable to real-world driving scenarios.
+- Focus on providing a comprehensive and accurate assessment of the current driving environment.
+
+#### End of Prompt
+
+#### Input Question and Image
