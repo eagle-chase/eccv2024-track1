@@ -1,7 +1,9 @@
-xtuner/projects/llava_llama3/configs/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune.py
-General Perception Score: 52.0
-Driving Suggestion Score: 59.2
-Region Perception Score: 76.98924731182797
-{'barrier': 73.57142857142857, 'miscellaneous': 58.57142857142857, 'traffic_cone': 83.33333333333334, 'traffic_light': 0.0, 'traffic_sign': 0.0, 'vehicle': 81.0344827586207, 'vru': 54.0}
-Final Score: 62.72974910394265
+Mini-Val - test_0002 ~ test_0500
 
+xtuner/projects/llava_llama3/configs/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune.py
+General Perception Score: 48.53
+Driving Suggestion Score: 47.57
+
+xtuner/projects/llava_llama3/configs/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune.py(+prompt)
+General Perception Score: 28.48
+Driving Suggestion Score: 32.62
