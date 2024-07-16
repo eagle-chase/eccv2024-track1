@@ -21,7 +21,7 @@ def main():
                     chat_template_config=ChatTemplateConfig(model_name='llama3'))
 
     split = 'Mini-Val'
-    save_floder = 'Mini-Val'
+    save_folder = 'Mini-Val'
     input_jsonl_lst = [
         f'data/coda-lm/CODA-LM/{split}/vqa_anno/driving_suggestion.jsonl',
         f'data/coda-lm/CODA-LM/{split}/vqa_anno/general_perception.jsonl',
