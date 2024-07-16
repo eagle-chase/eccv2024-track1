@@ -44,7 +44,7 @@ def main():
        
         task_name = get_task_name(input_path)
         
-        prompt_file_path = os.path.join('infer/', task_to_prompt_file[task_name])
+        prompt_file_path = os.path.join('infer/template', task_to_prompt_file[task_name])
         with open(prompt_file_path, 'r') as file:
             task_prompt = file.read().strip()
 

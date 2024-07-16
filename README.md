@@ -40,5 +40,5 @@ bash scripts/convert_pth_to_official.sh
 ```
 python infer/hf_lmdeploy_infer.py
 
-lmdeploy serve gradio --chat-template template/llama3_chat_template.json --model-name llava-v1 model/official/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune
+lmdeploy serve gradio --chat-template infer/template/llama3_chat_template.json --model-name llava-v1 model/official/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune
 ```
