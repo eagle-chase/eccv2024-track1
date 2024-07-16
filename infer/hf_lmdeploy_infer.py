@@ -44,9 +44,8 @@ def main():
         for idx in range(len(infer_output)):
             origin_data[idx]["answer"] = infer_output[idx]
         
-        os.mkdirs(os.path.join(model_path, 'results'), exist_ok=True)
         if not os.path.exists(os.path.join(model_path, 'results', save_folder)):
-            os.makedirs(os.path.join(model_path, 'results', save_folder))
+            os.makedirs(os.path.join(model_path, 'results', save_folder), exist_ok=True)
         save_jsonl(os.path.join(model_path, 'results', save_folder, input_path.split('/')[-1]), origin_data)
 
 if __name__ == '__main__':
