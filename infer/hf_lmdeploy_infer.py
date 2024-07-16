@@ -19,7 +19,7 @@ def main():
     pipe = pipeline('model/official/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune',
                     chat_template_config=ChatTemplateConfig(model_name='llama3'))
 
-    split = 'Mini'
+    split = 'Mini-Val'
     input_jsonl_lst = [
         f'data/coda-lm/CODA-LM/{split}/vqa_anno/driving_suggestion.jsonl',
         f'data/coda-lm/CODA-LM/{split}/vqa_anno/general_perception.jsonl',
@@ -42,9 +42,9 @@ def main():
         for idx in range(len(infer_output)):
             origin_data[idx]["answer"] = infer_output[idx]
         
-        if not os.path.exists(f'data/results/{split}'):
-            os.makedirs(f'data/results/{split}')
-        save_jsonl(os.path.join(f'data/results/pred/{split}', input_path.split('/')[-1]), origin_data)
+        if not os.path.exists(f'data/results/infer/{split}'):
+            os.makedirs(f'data/results/infer/{split}')
+        save_jsonl(os.path.join(f'data/results/infer/{split}', input_path.split('/')[-1]), origin_data)
 
 
 if __name__ == '__main__':

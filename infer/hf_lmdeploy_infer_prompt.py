@@ -61,9 +61,9 @@ def main():
         for idx in range(len(infer_output)):
             origin_data[idx]["answer"] = infer_output[idx]
         
-        if not os.path.exists(f'data/results/{split}'):
-            os.makedirs(f'data/results/{split}')
-        save_jsonl(os.path.join(f'data/results/pred/{split}', input_path.split('/')[-1]), origin_data)
+        if not os.path.exists(f'data/results/infer/{split}'):
+            os.makedirs(f'data/results/infer/{split}')
+        save_jsonl(os.path.join(f'data/results/infer/{split}', input_path.split('/')[-1]), origin_data)
 
 
 if __name__ == '__main__':
