@@ -1,0 +1,71 @@
+### General Perception Task Prompt
+
+#### Task Objective:
+This task aims to evaluate MLLMs' capability in understanding and describing key entities within driving scenes. The objective is to provide a comprehensive perception of potential road obstacles, including their appearance, location, and the reasons they influence driving decisions. 
+
+#### Instructions for the Model:
+You are an experienced driver tasked with providing a detailed perception analysis based on a given traffic scene. The scene is captured from the perspective of the ego car. Focus your analysis on the following categories of objects that influence driving behavior:
+- **Vehicles**: cars, trucks, buses, etc.
+- **Vulnerable Road Users**: pedestrians, cyclists, motorcyclists
+- **Traffic Signs**: no parking, warning, directional, etc.
+- **Traffic Lights**: red, green, yellow
+- **Traffic Cones**
+- **Barriers**
+- **Miscellaneous**: debris, dustbin, animals, etc.
+
+**Do not discuss any objects beyond these seven categories.**
+
+#### Prompt:
+
+**Context**:
+- You will be given an image depicting a traffic scene from the perspective of the ego car.
+- The objects you need to focus on are marked with red boxes in the image. These objects belong to one of the seven specified categories.
+
+**Guidelines**:
+1. **Carefully analyze** the objects within the red boxes.
+2. **Describe** each object's appearance, position, and direction.
+3. **Explain** why each object would affect the ego car's driving behavior.
+
+**Example Question**:
+There is an image of traffic captured from the perspective of the ego car. Focus on objects influencing the ego car's driving behavior: vehicles (cars, trucks, buses, etc.), vulnerable road users (pedestrians, cyclists, motorcyclists), traffic signs (no parking, warning, directional, etc.), traffic lights (red, green, yellow), traffic cones, barriers, miscellaneous (debris, dustbin, animals, etc.). You must not discuss any objects beyond the seven categories above. The relevant objects are marked with red boxes. Please describe each object's appearance, position, direction, and explain why it affects the ego car's behavior.
+
+**Response Format**:
+For each category, describe the object's appearance, position, and direction, followed by an explanation of its impact on driving behavior.
+
+**Example Response**:
+1. **Vehicle**:
+   - **Description**: A red car is located directly ahead in the same lane, moving in the same direction as the ego car.
+   - **Impact**: The red car ahead requires the ego car to maintain a safe following distance to avoid a collision.
+   
+2. **Vulnerable Road User**:
+   - **Description**: A pedestrian is crossing the street from left to right, positioned at the edge of the crosswalk.
+   - **Impact**: The pedestrian crossing the street necessitates the ego car to yield and ensure their safety before proceeding.
+   
+3. **Traffic Sign**:
+   - **Description**: A stop sign is positioned on the right side of the road, at the upcoming intersection.
+   - **Impact**: The stop sign indicates that the ego car must come to a complete stop at the intersection before continuing.
+   
+4. **Traffic Light**:
+   - **Description**: A green traffic light is at the current intersection, directly above the road.
+   - **Impact**: The green light allows the ego car to proceed through the intersection, but with caution for other road users.
+   
+5. **Traffic Cone**:
+   - **Description**: A series of traffic cones are placed along the right side of the lane, marking a construction area.
+   - **Impact**: The traffic cones indicate a construction area, requiring the ego car to stay clear and possibly merge left.
+   
+6. **Barrier**:
+   - **Description**: Construction barriers are located on the right side of the road, alongside the traffic cones.
+   - **Impact**: The construction barriers necessitate the ego car to avoid the right side of the lane to prevent collision.
+   
+7. **Miscellaneous**:
+   - **Description**: A dustbin is placed on the sidewalk to the right of the road.
+   - **Impact**: The dustbin on the sidewalk does not directly affect the driving path but serves as a reference for the edge of the road.
+
+**Notes**:
+- Be precise and clear in your analysis and descriptions.
+- Ensure that your descriptions and explanations are practical and applicable to real-world driving scenarios.
+- Focus on providing a comprehensive and accurate assessment of the current driving environment.
+
+#### End of Prompt
+
+#### Input Question and Image

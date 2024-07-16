@@ -16,10 +16,12 @@ def load_input(input_path: str, image_root: str):
 def main():
 
     batch_size = 4
-    pipe = pipeline('model/official/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune',
+    model_path = 'model/official/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune'
+    pipe = pipeline(model_path,
                     chat_template_config=ChatTemplateConfig(model_name='llama3'))
 
     split = 'Mini-Val'
+    save_floder = 'Mini-Val'
     input_jsonl_lst = [
         f'data/coda-lm/CODA-LM/{split}/vqa_anno/driving_suggestion.jsonl',
         f'data/coda-lm/CODA-LM/{split}/vqa_anno/general_perception.jsonl',
@@ -42,10 +44,10 @@ def main():
         for idx in range(len(infer_output)):
             origin_data[idx]["answer"] = infer_output[idx]
         
-        if not os.path.exists(f'data/results/infer/{split}'):
-            os.makedirs(f'data/results/infer/{split}')
-        save_jsonl(os.path.join(f'data/results/infer/{split}', input_path.split('/')[-1]), origin_data)
-
+        os.mkdirs(os.path.join(model_path, 'results'), exist_ok=True)
+        if not os.path.exists(os.path.join(model_path, 'results', save_folder)):
+            os.makedirs(os.path.join(model_path, 'results', save_folder))
+        save_jsonl(os.path.join(model_path, 'results', save_folder, input_path.split('/')[-1]), origin_data)
 
 if __name__ == '__main__':
     main()

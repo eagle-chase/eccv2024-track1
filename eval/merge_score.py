@@ -1,5 +1,7 @@
+import argparse
 
-base_folder = 'data/results/score/Mini'
+argparser = argparse.ArgumentParser()
+argparser.add_argument('--base_folder', type=str, default='')
 
 def read_txt(file_path):
     with open(file_path, 'r') as f:
