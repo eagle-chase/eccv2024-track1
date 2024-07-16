@@ -2,6 +2,7 @@ SPLIT='Mini-Val'
 OPENAI_KEY='sk-xWQahTx28GvonjjC01F2C292581a4073A812D418Df90Dd2d'
 API_BASE_URL='https://api.gpts.vin/v1'
 MODEL_PATH='model/official/llava_llama3_8b_instruct_full_clip_vit_large_p14_336_lora_e4_gpu8_finetune'
+ROOT_TO_GT='data/coda-lm/CODA-LM/Mini-Val'
 
 python eval/evaluation/stage1_eval_batch.py --reference_path $ROOT_TO_GT \
 --prediction_path $MODEL_PATH/$SPLIT/general_perception.jsonl \
